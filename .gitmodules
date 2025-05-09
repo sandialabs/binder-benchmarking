@@ -1,0 +1,3 @@
+[submodule "ennui"]
+	path = ennui
+	url = https://github.com/sandialabs/ENnUI.git

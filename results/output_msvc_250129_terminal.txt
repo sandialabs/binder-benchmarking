@@ -1,0 +1,180 @@
+(binder_benchmark) D:\repos\rear-window\benchmarking_PLANS\binder-benchmarking>.\scripts\run_all.bat > output_msvc.txt
+
+======== Input profiles ========
+Profile host:
+[settings]
+arch=x86_64
+build_type=Release
+compiler=msvc
+compiler.cppstd=17
+compiler.runtime=dynamic
+compiler.runtime_type=Release
+compiler.version=192
+os=Windows
+[conf]
+
+
+Profile build:
+[settings]
+arch=x86_64
+build_type=Release
+compiler=msvc
+compiler.cppstd=17
+compiler.runtime=dynamic
+compiler.runtime_type=Release
+compiler.version=192
+os=Windows
+[conf]
+
+
+
+======== Computing dependency graph ========
+Graph root
+    conanfile.py (binder/None): D:\repos\rear-window\benchmarking_PLANS\binder-benchmarking\conanfile.py
+Requirements
+    catch2/3.4.0#eb6f89bbc70b6b3d8748d21ab8fb9468 - Cache
+    eigen/3.4.0#1bc43ded5116678f202a75aa887ef142 - Cache
+Build requirements
+    cmake/3.22.6#32cced101c6df0fab43e8d00bd2483eb - Cache
+Resolved version ranges
+    cmake/[>=3.20]: cmake/3.22.6
+
+======== Computing necessary packages ========
+catch2/3.4.0: Main binary package '84e38b7781d1576e40d05ced5d07a1db535c9685' missing
+catch2/3.4.0: Checking 2 compatible configurations
+catch2/3.4.0: Found compatible package '5de26caaab06f8aa2685515ea16235a092d24123': compiler.cppstd=14
+Requirements
+    catch2/3.4.0#eb6f89bbc70b6b3d8748d21ab8fb9468:5de26caaab06f8aa2685515ea16235a092d24123#02c1c68d56a27b665e423c000f18164a - Cache
+    eigen/3.4.0#1bc43ded5116678f202a75aa887ef142:da39a3ee5e6b4b0d3255bfef95601890afd80709#3d4cb80b19cf7de2d5fd0a2413dab746 - Cache
+Build requirements
+    cmake/3.22.6#32cced101c6df0fab43e8d00bd2483eb:522dcea5982a3f8a5b624c16477e47195da2f84f#a9d024f459972755e5a815b775408fff - Cache
+
+======== Installing packages ========
+catch2/3.4.0: Already installed! (1 of 3)
+cmake/3.22.6: Already installed! (2 of 3)
+cmake/3.22.6: Appending PATH environment variable: C:\Users\mrwalke\.conan2\p\cmake1927748c2604b\p\bin
+eigen/3.4.0: Already installed! (3 of 3)
+WARN: deprecated: Usage of deprecated Conan 1.X features that will be removed in Conan 2.X:
+WARN: deprecated:     'cpp_info.filenames' used in: catch2/3.4.0
+WARN: deprecated:     'cpp_info.names' used in: catch2/3.4.0, eigen/3.4.0
+WARN: deprecated:     'cpp_info.build_modules' used in: catch2/3.4.0
+WARN: deprecated:     'env_info' used in: cmake/3.22.6
+
+======== Finalizing install (deploy, generators) ========
+conanfile.py (binder/None): Writing generators to D:\repos\rear-window\benchmarking_PLANS\binder-benchmarking\build\generators
+conanfile.py (binder/None): Generator 'CMakeDeps' calling 'generate()'
+conanfile.py (binder/None): CMakeDeps necessary find_package() and targets for your CMakeLists.txt
+    find_package(Eigen3)
+    find_package(Catch2)
+    target_link_libraries(... Eigen3::Eigen Catch2::Catch2WithMain)
+conanfile.py (binder/None): Calling generate()
+conanfile.py (binder/None): Generators folder: D:\repos\rear-window\benchmarking_PLANS\binder-benchmarking\build\generators
+conanfile.py (binder/None): CMakeToolchain generated: conan_toolchain.cmake
+conanfile.py (binder/None): CMakeToolchain: Preset 'conan-default' added to CMakePresets.json.
+    (cmake>=3.23) cmake --preset conan-default
+    (cmake<3.23) cmake <path> -G "Visual Studio 16 2019" -DCMAKE_TOOLCHAIN_FILE=generators\conan_toolchain.cmake  -DCMAKE_POLICY_DEFAULT_CMP0091=NEW
+conanfile.py (binder/None): CMakeToolchain generated: D:\repos\rear-window\benchmarking_PLANS\binder-benchmarking\build\generators\CMakePresets.json
+conanfile.py (binder/None): CMakeToolchain generated: D:\repos\rear-window\benchmarking_PLANS\binder-benchmarking\CMakeUserPresets.json
+conanfile.py (binder/None): Generating aggregated env files
+conanfile.py (binder/None): Generated aggregated env files: ['conanbuild.bat', 'conanrun.bat']
+Install finished successfully
+================================================================================
+BinderBenchmark v0.0.0, macro definitions:
+================================================================================
+   ...MSVC selected. MSVC-specific macros...
+   VS_STARTUP_PROJECT=BinderBenchmark_test
+================================================================================
+Excluding python module.
+Excluding matlab dll.
+WARN: Downgrading cache from Conan 2.12.1 to 2.10.2
+
+======== Input profiles ========
+Profile host:
+[settings]
+arch=x86_64
+build_type=Release
+compiler=msvc
+compiler.cppstd=17
+compiler.runtime=dynamic
+compiler.runtime_type=Release
+compiler.version=192
+os=Windows
+[conf]
+
+
+Profile build:
+[settings]
+arch=x86_64
+build_type=Release
+compiler=msvc
+compiler.cppstd=17
+compiler.runtime=dynamic
+compiler.runtime_type=Release
+compiler.version=192
+os=Windows
+[conf]
+
+
+
+======== Computing dependency graph ========
+Graph root
+    conanfile.py (binder/None): D:\repos\rear-window\benchmarking_PLANS\binder-benchmarking\conanfile.py
+Requirements
+    catch2/3.4.0#eb6f89bbc70b6b3d8748d21ab8fb9468 - Cache
+    eigen/3.4.0#1bc43ded5116678f202a75aa887ef142 - Cache
+Build requirements
+    cmake/3.22.6#32cced101c6df0fab43e8d00bd2483eb - Cache
+Resolved version ranges
+    cmake/[>=3.20]: cmake/3.22.6
+
+======== Computing necessary packages ========
+catch2/3.4.0: Main binary package '84e38b7781d1576e40d05ced5d07a1db535c9685' missing
+catch2/3.4.0: Checking 2 compatible configurations
+catch2/3.4.0: Found compatible package '5de26caaab06f8aa2685515ea16235a092d24123': compiler.cppstd=14
+Requirements
+    catch2/3.4.0#eb6f89bbc70b6b3d8748d21ab8fb9468:5de26caaab06f8aa2685515ea16235a092d24123#02c1c68d56a27b665e423c000f18164a - Cache
+    eigen/3.4.0#1bc43ded5116678f202a75aa887ef142:da39a3ee5e6b4b0d3255bfef95601890afd80709#3d4cb80b19cf7de2d5fd0a2413dab746 - Cache
+Build requirements
+    cmake/3.22.6#32cced101c6df0fab43e8d00bd2483eb:522dcea5982a3f8a5b624c16477e47195da2f84f#a9d024f459972755e5a815b775408fff - Cache
+
+======== Installing packages ========
+catch2/3.4.0: Already installed! (1 of 3)
+cmake/3.22.6: Already installed! (2 of 3)
+cmake/3.22.6: Appending PATH environment variable: C:\Users\mrwalke\.conan2\p\cmake1927748c2604b\p\bin
+eigen/3.4.0: Already installed! (3 of 3)
+WARN: deprecated: Usage of deprecated Conan 1.X features that will be removed in Conan 2.X:
+WARN: deprecated:     'cpp_info.filenames' used in: catch2/3.4.0
+WARN: deprecated:     'cpp_info.names' used in: catch2/3.4.0, eigen/3.4.0
+WARN: deprecated:     'cpp_info.build_modules' used in: catch2/3.4.0
+WARN: deprecated:     'env_info' used in: cmake/3.22.6
+
+======== Finalizing install (deploy, generators) ========
+conanfile.py (binder/None): Writing generators to D:\repos\rear-window\benchmarking_PLANS\binder-benchmarking\build\generators
+conanfile.py (binder/None): Generator 'CMakeDeps' calling 'generate()'
+conanfile.py (binder/None): CMakeDeps necessary find_package() and targets for your CMakeLists.txt
+    find_package(Eigen3)
+    find_package(Catch2)
+    target_link_libraries(... Eigen3::Eigen Catch2::Catch2WithMain)
+conanfile.py (binder/None): Calling generate()
+conanfile.py (binder/None): Generators folder: D:\repos\rear-window\benchmarking_PLANS\binder-benchmarking\build\generators
+conanfile.py (binder/None): CMakeToolchain generated: conan_toolchain.cmake
+conanfile.py (binder/None): CMakeToolchain: Preset 'conan-default' added to CMakePresets.json.
+    (cmake>=3.23) cmake --preset conan-default
+    (cmake<3.23) cmake <path> -G "Visual Studio 16 2019" -DCMAKE_TOOLCHAIN_FILE=generators\conan_toolchain.cmake  -DCMAKE_POLICY_DEFAULT_CMP0091=NEW
+conanfile.py (binder/None): CMakeToolchain generated: D:\repos\rear-window\benchmarking_PLANS\binder-benchmarking\build\generators\CMakePresets.json
+conanfile.py (binder/None): CMakeToolchain generated: D:\repos\rear-window\benchmarking_PLANS\binder-benchmarking\CMakeUserPresets.json
+conanfile.py (binder/None): Generating aggregated env files
+conanfile.py (binder/None): Generated aggregated env files: ['conanbuild.bat', 'conanrun.bat']
+Install finished successfully
+================================================================================
+BinderBenchmark v0.0.0, macro definitions:
+================================================================================
+   ...MSVC selected. MSVC-specific macros...
+   VS_STARTUP_PROJECT=BinderBenchmark::mennui
+================================================================================
+Excluding python module.
+Generating MATLAB dll.
+The syntax of the command is incorrect.
+=== Detected MSVC ===
+
+(binder_benchmark) D:\repos\rear-window\benchmarking_PLANS\binder-benchmarking>

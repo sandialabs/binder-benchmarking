@@ -1,0 +1,32 @@
+
+# if source built locally...
+build/
+
+# if docs built locally...
+build-site/
+.mkdoxy/
+
+# developer presets...
+.vscode/
+CMakeUserPresets.json
+
+# CMake auto-generated
+CMakeCache.txt
+CMakeFiles/
+
+
+# OSX stuff
+
+# General
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Icon must end with two \r
+Icon
+
+# Thumbnails
+._*
+
+# Matlab
+*.asv

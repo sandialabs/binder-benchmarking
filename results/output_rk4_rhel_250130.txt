@@ -1,0 +1,322 @@
+SH: Deleting build folder (if it exists)...
+SH: Setup build generator for C++ using cmake...
+-- The C compiler identification is Clang 18.1.8
+-- The CXX compiler identification is Clang 18.1.8
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/clang - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/clang++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found Python: /usr/bin/python3.9 (found version "3.9.21") found components: Interpreter Development.Module Development.SABIModule 
+-- Found Python3: /usr/bin/python3.9 (found version "3.9.21") found components: Interpreter 
+-- Performing Test HAS_FLTO_THIN
+-- Performing Test HAS_FLTO_THIN - Success
+-- Found pybind11: /usr/lib/python3.9/site-packages/pybind11/include (found version "2.13.6")
+-- Configuring done (4.8s)
+-- Generating done (0.5s)
+-- Build files have been written to: /app/binder_LDRD/build
+SH: Build C++ exe...
+make: Entering directory '/app/binder_LDRD/build'
+make[1]: Entering directory '/app/binder_LDRD/build'
+make[2]: Entering directory '/app/binder_LDRD/build'
+make[2]: Entering directory '/app/binder_LDRD/build'
+make[2]: Entering directory '/app/binder_LDRD/build'
+make[2]: Leaving directory '/app/binder_LDRD/build'
+make[2]: Leaving directory '/app/binder_LDRD/build'
+make[2]: Entering directory '/app/binder_LDRD/build'
+make[2]: Entering directory '/app/binder_LDRD/build'
+[ 10%] Building CXX object CMakeFiles/rk4_integration_pybind11.dir/rk4_integration_pybind11.cpp.o
+[ 10%] Building CXX object CMakeFiles/rk4_integration_cpp.dir/rk4_integration_pureCpp.cpp.o
+make[2]: Leaving directory '/app/binder_LDRD/build'
+[ 20%] Building CXX object CMakeFiles/rk4_integration_cpp.dir/rk4_integration.cpp.o
+[ 20%] Building CXX object CMakeFiles/rk4_integration_pybind11.dir/rk4_integration.cpp.o
+make[2]: Entering directory '/app/binder_LDRD/build'
+[ 30%] Building CXX object CMakeFiles/nanobind-static.dir/usr/lib/python3.9/site-packages/nanobind/src/nb_internals.cpp.o
+[ 30%] Building CXX object CMakeFiles/nanobind-static.dir/usr/lib/python3.9/site-packages/nanobind/src/nb_func.cpp.o
+[ 35%] Building CXX object CMakeFiles/nanobind-static.dir/usr/lib/python3.9/site-packages/nanobind/src/nb_type.cpp.o
+[ 45%] Building CXX object CMakeFiles/nanobind-static.dir/usr/lib/python3.9/site-packages/nanobind/src/nb_enum.cpp.o
+[ 45%] Building CXX object CMakeFiles/nanobind-static.dir/usr/lib/python3.9/site-packages/nanobind/src/nb_ndarray.cpp.o
+[ 50%] Building CXX object CMakeFiles/nanobind-static.dir/usr/lib/python3.9/site-packages/nanobind/src/nb_static_property.cpp.o
+[ 55%] Building CXX object CMakeFiles/nanobind-static.dir/usr/lib/python3.9/site-packages/nanobind/src/common.cpp.o
+[ 65%] Building CXX object CMakeFiles/nanobind-static.dir/usr/lib/python3.9/site-packages/nanobind/src/error.cpp.o
+[ 65%] Building CXX object CMakeFiles/nanobind-static.dir/usr/lib/python3.9/site-packages/nanobind/src/trampoline.cpp.o
+[ 70%] Building CXX object CMakeFiles/nanobind-static.dir/usr/lib/python3.9/site-packages/nanobind/src/implicit.cpp.o
+[ 75%] Linking CXX executable rk4_integration_cpp
+make[2]: Leaving directory '/app/binder_LDRD/build'
+[ 75%] Built target rk4_integration_cpp
+[ 80%] Linking CXX static library libnanobind-static.a
+make[2]: Leaving directory '/app/binder_LDRD/build'
+[ 80%] Built target nanobind-static
+make[2]: Entering directory '/app/binder_LDRD/build'
+make[2]: Leaving directory '/app/binder_LDRD/build'
+make[2]: Entering directory '/app/binder_LDRD/build'
+[ 85%] Building CXX object CMakeFiles/rk4_integration_nanobind.dir/rk4_integration_nanobind.cpp.o
+[ 90%] Building CXX object CMakeFiles/rk4_integration_nanobind.dir/rk4_integration.cpp.o
+[ 95%] Linking CXX shared module rk4_integration_nanobind.cpython-39-x86_64-linux-gnu.so
+make[2]: Leaving directory '/app/binder_LDRD/build'
+[ 95%] Built target rk4_integration_nanobind
+[100%] Linking CXX shared module rk4_integration_pybind11.cpython-39-x86_64-linux-gnu.so
+make[2]: Leaving directory '/app/binder_LDRD/build'
+[100%] Built target rk4_integration_pybind11
+make[1]: Leaving directory '/app/binder_LDRD/build'
+make: Leaving directory '/app/binder_LDRD/build'
+SH: Running C++ benchmark
+Full C++ Test:
+BENCHMARK TABLE: rk4_cpp
+BENCHMARK HEADER: propagationCycles, rk4_cpp
+BENCHMARK:   1000, 6.02295e-06
+BENCHMARK:   1000, 2.21946e-06
+BENCHMARK:   1000, 2.28410e-06
+BENCHMARK:   1000, 2.24869e-06
+BENCHMARK:   1000, 1.94299e-06
+BENCHMARK:   1000, 1.89798e-06
+BENCHMARK:   1000, 2.01237e-06
+BENCHMARK:   1000, 5.91217e-06
+BENCHMARK:   1000, 1.64318e-06
+BENCHMARK:   1000, 1.56920e-06
+BENCHMARK:  10000, 3.64114e-05
+BENCHMARK:  10000, 2.23990e-05
+BENCHMARK:  10000, 1.69002e-05
+BENCHMARK:  10000, 1.69872e-05
+BENCHMARK:  10000, 1.70601e-05
+BENCHMARK:  10000, 1.88006e-05
+BENCHMARK:  10000, 1.62407e-05
+BENCHMARK:  10000, 1.63606e-05
+BENCHMARK:  10000, 1.64721e-05
+BENCHMARK:  10000, 3.78151e-05
+BENCHMARK: 100000, 2.13293e-04
+BENCHMARK: 100000, 2.67578e-04
+BENCHMARK: 100000, 2.07647e-04
+BENCHMARK: 100000, 1.93269e-04
+BENCHMARK: 100000, 1.97822e-04
+BENCHMARK: 100000, 1.97457e-04
+BENCHMARK: 100000, 1.84059e-04
+BENCHMARK: 100000, 1.86850e-04
+BENCHMARK: 100000, 1.84667e-04
+BENCHMARK: 100000, 2.11071e-04
+BENCHMARK: 1000000, 1.84652e-03
+BENCHMARK: 1000000, 1.85194e-03
+BENCHMARK: 1000000, 1.81054e-03
+BENCHMARK: 1000000, 1.91137e-03
+BENCHMARK: 1000000, 1.84513e-03
+BENCHMARK: 1000000, 1.99793e-03
+BENCHMARK: 1000000, 1.99757e-03
+BENCHMARK: 1000000, 1.83756e-03
+BENCHMARK: 1000000, 1.87538e-03
+BENCHMARK: 1000000, 1.90592e-03
+SH: Running benchmarks from python
+The current working directory is: /app/binder_LDRD
+Running script name :  ./benchmark/pureClib/benchmark_variation.py
+Number of input arguments :  2
+adding path:  ./build/
+Running Python benchmarks: 
+Ordering: pybind11_Cloop, pybind11_pythonloop, nanobind_Cloop, nanobind_pythonloop
+BENCHMARK TABLE: rk4_python
+BENCHMARK HEADER: propagationCycles, benchmark_rk4_integration_pybind11, benchmark_rk4_integration_single_step_pybind11, benchmark_rk4_integration_nanobind, benchmark_rk4_integration_single_step_nanobind
+BENCHMARK:    1000, 1.05459e-05, 8.06113e-04, 9.91245e-06, 5.34846e-04
+BENCHMARK:    1000, 1.01606e-05, 6.79669e-04, 8.06539e-06, 4.22024e-04
+BENCHMARK:    1000, 8.32036e-06, 6.99387e-04, 7.04898e-06, 3.69366e-04
+BENCHMARK:    1000, 4.13202e-06, 2.93025e-04, 2.91895e-06, 1.52658e-04
+BENCHMARK:    1000, 3.25509e-06, 2.54001e-04, 2.83314e-06, 1.49249e-04
+BENCHMARK:    1000, 3.04857e-06, 2.53887e-04, 2.82093e-06, 1.45465e-04
+BENCHMARK:    1000, 3.22252e-06, 2.89146e-04, 2.76788e-06, 1.45470e-04
+BENCHMARK:    1000, 3.09840e-06, 2.52749e-04, 2.81081e-06, 1.48022e-04
+BENCHMARK:    1000, 3.19252e-06, 2.50961e-04, 2.96064e-06, 1.48800e-04
+BENCHMARK:    1000, 3.23393e-06, 2.53940e-04, 2.77706e-06, 1.45213e-04
+BENCHMARK:   10000, 2.67988e-05, 2.20181e-03, 3.88540e-05, 1.44918e-03
+BENCHMARK:   10000, 3.56309e-05, 2.20159e-03, 2.81893e-05, 1.45233e-03
+BENCHMARK:   10000, 2.64464e-05, 2.19164e-03, 2.52464e-05, 1.44666e-03
+BENCHMARK:   10000, 2.49544e-05, 1.99599e-03, 2.57498e-05, 1.43110e-03
+BENCHMARK:   10000, 4.87805e-05, 2.01608e-03, 2.63710e-05, 1.45939e-03
+BENCHMARK:   10000, 2.65652e-05, 2.22336e-03, 3.45626e-05, 1.43654e-03
+BENCHMARK:   10000, 2.53045e-05, 2.16451e-03, 2.52347e-05, 1.42422e-03
+BENCHMARK:   10000, 4.55488e-05, 4.93969e-03, 3.70164e-05, 1.45466e-03
+BENCHMARK:   10000, 4.25312e-05, 5.59933e-03, 2.82624e-05, 1.37642e-03
+BENCHMARK:   10000, 2.56083e-05, 1.99813e-03, 2.55719e-05, 1.31539e-03
+BENCHMARK:  100000, 2.56727e-04, 2.22321e-02, 2.95832e-04, 1.48317e-02
+BENCHMARK:  100000, 2.93830e-04, 3.27919e-02, 3.12978e-04, 1.45499e-02
+BENCHMARK:  100000, 3.11997e-04, 2.22457e-02, 3.43401e-04, 1.44610e-02
+BENCHMARK:  100000, 2.74838e-04, 2.09203e-02, 2.99613e-04, 1.35540e-02
+BENCHMARK:  100000, 3.35401e-04, 2.25107e-02, 2.72104e-04, 1.44806e-02
+BENCHMARK:  100000, 3.13117e-04, 2.11047e-02, 3.20272e-04, 1.48559e-02
+BENCHMARK:  100000, 3.01612e-04, 2.97303e-02, 2.82900e-04, 1.43211e-02
+BENCHMARK:  100000, 3.75888e-04, 2.16324e-02, 2.63744e-04, 1.44663e-02
+BENCHMARK:  100000, 3.08909e-04, 2.20643e-02, 3.03465e-04, 1.43714e-02
+BENCHMARK:  100000, 3.15232e-04, 2.09340e-02, 3.46412e-04, 2.08799e-02
+BENCHMARK: 1000000, 3.15125e-03, 3.01794e-01, 3.21197e-03, 1.54431e-01
+BENCHMARK: 1000000, 3.18681e-03, 2.25149e-01, 3.01267e-03, 1.85199e-01
+BENCHMARK: 1000000, 3.17600e-03, 2.26878e-01, 2.99696e-03, 1.52782e-01
+BENCHMARK: 1000000, 3.11076e-03, 2.61819e-01, 3.03731e-03, 1.41155e-01
+BENCHMARK: 1000000, 3.10640e-03, 2.51072e-01, 3.22324e-03, 1.70877e-01
+BENCHMARK: 1000000, 3.04499e-03, 2.22164e-01, 3.10934e-03, 1.80588e-01
+BENCHMARK: 1000000, 3.17126e-03, 2.61043e-01, 3.28946e-03, 1.51721e-01
+BENCHMARK: 1000000, 3.24449e-03, 2.12176e-01, 3.10398e-03, 1.42687e-01
+BENCHMARK: 1000000, 3.12634e-03, 2.88565e-01, 3.32899e-03, 2.00803e-01
+BENCHMARK: 1000000, 2.85759e-03, 2.57965e-01, 2.96787e-03, 1.38484e-01
+   script complete.
+SH: Deleting build folder (if it exists)...
+SH: Setup build generator for C++ using cmake...
+-- The C compiler identification is GNU 11.5.0
+-- The CXX compiler identification is GNU 11.5.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found Python: /usr/bin/python3.9 (found version "3.9.21") found components: Interpreter Development.Module Development.SABIModule 
+-- Found Python3: /usr/bin/python3.9 (found version "3.9.21") found components: Interpreter 
+-- Performing Test HAS_FLTO
+-- Performing Test HAS_FLTO - Success
+-- Found pybind11: /usr/lib/python3.9/site-packages/pybind11/include (found version "2.13.6")
+-- Configuring done (6.8s)
+-- Generating done (0.4s)
+-- Build files have been written to: /app/binder_LDRD/build
+SH: Build C++ exe...
+make: Entering directory '/app/binder_LDRD/build'
+make[1]: Entering directory '/app/binder_LDRD/build'
+make[2]: Entering directory '/app/binder_LDRD/build'
+make[2]: Entering directory '/app/binder_LDRD/build'
+make[2]: Entering directory '/app/binder_LDRD/build'
+make[2]: Leaving directory '/app/binder_LDRD/build'
+make[2]: Leaving directory '/app/binder_LDRD/build'
+make[2]: Entering directory '/app/binder_LDRD/build'
+make[2]: Entering directory '/app/binder_LDRD/build'
+make[2]: Leaving directory '/app/binder_LDRD/build'
+[ 15%] Building CXX object CMakeFiles/rk4_integration_cpp.dir/rk4_integration.cpp.o
+[ 15%] Building CXX object CMakeFiles/rk4_integration_pybind11.dir/rk4_integration.cpp.o
+[ 15%] Building CXX object CMakeFiles/rk4_integration_pybind11.dir/rk4_integration_pybind11.cpp.o
+[ 20%] Building CXX object CMakeFiles/rk4_integration_cpp.dir/rk4_integration_pureCpp.cpp.o
+make[2]: Entering directory '/app/binder_LDRD/build'
+[ 30%] Building CXX object CMakeFiles/nanobind-static.dir/usr/lib/python3.9/site-packages/nanobind/src/nb_internals.cpp.o
+[ 35%] Building CXX object CMakeFiles/nanobind-static.dir/usr/lib/python3.9/site-packages/nanobind/src/nb_func.cpp.o
+[ 35%] Building CXX object CMakeFiles/nanobind-static.dir/usr/lib/python3.9/site-packages/nanobind/src/nb_type.cpp.o
+[ 40%] Building CXX object CMakeFiles/nanobind-static.dir/usr/lib/python3.9/site-packages/nanobind/src/nb_enum.cpp.o
+[ 45%] Building CXX object CMakeFiles/nanobind-static.dir/usr/lib/python3.9/site-packages/nanobind/src/nb_ndarray.cpp.o
+[ 55%] Building CXX object CMakeFiles/nanobind-static.dir/usr/lib/python3.9/site-packages/nanobind/src/nb_static_property.cpp.o
+[ 70%] Building CXX object CMakeFiles/nanobind-static.dir/usr/lib/python3.9/site-packages/nanobind/src/common.cpp.o
+[ 70%] Building CXX object CMakeFiles/nanobind-static.dir/usr/lib/python3.9/site-packages/nanobind/src/error.cpp.o
+[ 70%] Building CXX object CMakeFiles/nanobind-static.dir/usr/lib/python3.9/site-packages/nanobind/src/trampoline.cpp.o
+[ 70%] Building CXX object CMakeFiles/nanobind-static.dir/usr/lib/python3.9/site-packages/nanobind/src/implicit.cpp.o
+[ 75%] Linking CXX executable rk4_integration_cpp
+make[2]: Leaving directory '/app/binder_LDRD/build'
+[ 75%] Built target rk4_integration_cpp
+[ 80%] Linking CXX static library libnanobind-static.a
+[ 85%] Linking CXX shared module rk4_integration_pybind11.cpython-39-x86_64-linux-gnu.so
+make[2]: Leaving directory '/app/binder_LDRD/build'
+[ 85%] Built target nanobind-static
+make[2]: Entering directory '/app/binder_LDRD/build'
+make[2]: Leaving directory '/app/binder_LDRD/build'
+make[2]: Entering directory '/app/binder_LDRD/build'
+[ 95%] Building CXX object CMakeFiles/rk4_integration_nanobind.dir/rk4_integration_nanobind.cpp.o
+[ 95%] Building CXX object CMakeFiles/rk4_integration_nanobind.dir/rk4_integration.cpp.o
+[100%] Linking CXX shared module rk4_integration_nanobind.cpython-39-x86_64-linux-gnu.so
+make[2]: Leaving directory '/app/binder_LDRD/build'
+[100%] Built target rk4_integration_nanobind
+make[2]: Leaving directory '/app/binder_LDRD/build'
+[100%] Built target rk4_integration_pybind11
+make[1]: Leaving directory '/app/binder_LDRD/build'
+make: Leaving directory '/app/binder_LDRD/build'
+SH: Running C++ benchmark
+Full C++ Test:
+BENCHMARK TABLE: rk4_cpp
+BENCHMARK HEADER: propagationCycles, rk4_cpp
+BENCHMARK:   1000, 1.57101e-06
+BENCHMARK:   1000, 1.53531e-06
+BENCHMARK:   1000, 1.53442e-06
+BENCHMARK:   1000, 1.54870e-06
+BENCHMARK:   1000, 1.53900e-06
+BENCHMARK:   1000, 1.54462e-06
+BENCHMARK:   1000, 1.58520e-06
+BENCHMARK:   1000, 1.56088e-06
+BENCHMARK:   1000, 1.53816e-06
+BENCHMARK:   1000, 1.54431e-06
+BENCHMARK:  10000, 3.29604e-05
+BENCHMARK:  10000, 2.27994e-05
+BENCHMARK:  10000, 1.61277e-05
+BENCHMARK:  10000, 1.60038e-05
+BENCHMARK:  10000, 1.59026e-05
+BENCHMARK:  10000, 1.55373e-05
+BENCHMARK:  10000, 1.56314e-05
+BENCHMARK:  10000, 1.59573e-05
+BENCHMARK:  10000, 1.60653e-05
+BENCHMARK:  10000, 1.54357e-05
+BENCHMARK: 100000, 1.67289e-04
+BENCHMARK: 100000, 1.80022e-04
+BENCHMARK: 100000, 1.63045e-04
+BENCHMARK: 100000, 1.68893e-04
+BENCHMARK: 100000, 2.13987e-04
+BENCHMARK: 100000, 2.03759e-04
+BENCHMARK: 100000, 1.62555e-04
+BENCHMARK: 100000, 2.04133e-04
+BENCHMARK: 100000, 1.69378e-04
+BENCHMARK: 100000, 1.57188e-04
+BENCHMARK: 1000000, 1.73115e-03
+BENCHMARK: 1000000, 1.84857e-03
+BENCHMARK: 1000000, 2.05093e-03
+BENCHMARK: 1000000, 1.95429e-03
+BENCHMARK: 1000000, 1.93196e-03
+BENCHMARK: 1000000, 1.98907e-03
+BENCHMARK: 1000000, 1.96240e-03
+BENCHMARK: 1000000, 1.89389e-03
+BENCHMARK: 1000000, 1.93902e-03
+BENCHMARK: 1000000, 1.91234e-03
+SH: Running benchmarks from python
+The current working directory is: /app/binder_LDRD
+Running script name :  ./benchmark/pureClib/benchmark_variation.py
+Number of input arguments :  2
+adding path:  ./build/
+Running Python benchmarks: 
+Ordering: pybind11_Cloop, pybind11_pythonloop, nanobind_Cloop, nanobind_pythonloop
+BENCHMARK TABLE: rk4_python
+BENCHMARK HEADER: propagationCycles, benchmark_rk4_integration_pybind11, benchmark_rk4_integration_single_step_pybind11, benchmark_rk4_integration_nanobind, benchmark_rk4_integration_single_step_nanobind
+BENCHMARK:    1000, 3.15323e-06, 2.37863e-04, 2.67434e-06, 1.40579e-04
+BENCHMARK:    1000, 3.06791e-06, 2.34522e-04, 6.17682e-06, 5.26821e-04
+BENCHMARK:    1000, 9.97488e-06, 7.81128e-04, 7.61675e-06, 3.63451e-04
+BENCHMARK:    1000, 5.81188e-06, 3.45162e-04, 3.89857e-06, 2.10721e-04
+BENCHMARK:    1000, 3.74744e-06, 2.72972e-04, 2.54022e-06, 1.47493e-04
+BENCHMARK:    1000, 3.16476e-06, 2.67217e-04, 2.52819e-06, 1.32007e-04
+BENCHMARK:    1000, 3.15475e-06, 2.72977e-04, 2.76504e-06, 1.45323e-04
+BENCHMARK:    1000, 2.95253e-06, 2.34575e-04, 2.67926e-06, 1.70401e-04
+BENCHMARK:    1000, 3.13610e-06, 2.47270e-04, 2.67076e-06, 1.45229e-04
+BENCHMARK:    1000, 3.11234e-06, 2.84571e-04, 2.70413e-06, 1.44426e-04
+BENCHMARK:   10000, 2.47402e-05, 2.05692e-03, 2.46321e-05, 1.39930e-03
+BENCHMARK:   10000, 2.50420e-05, 2.17005e-03, 2.56187e-05, 1.37989e-03
+BENCHMARK:   10000, 2.52425e-05, 2.36930e-03, 2.48596e-05, 1.36578e-03
+BENCHMARK:   10000, 2.47020e-05, 2.00226e-03, 2.47754e-05, 1.39901e-03
+BENCHMARK:   10000, 2.48603e-05, 2.33052e-03, 2.66107e-05, 1.45576e-03
+BENCHMARK:   10000, 2.50927e-05, 2.27950e-03, 2.52511e-05, 1.37107e-03
+BENCHMARK:   10000, 2.56783e-05, 2.48125e-03, 3.00780e-05, 3.79498e-03
+BENCHMARK:   10000, 4.42249e-05, 2.23064e-03, 4.28265e-05, 1.41390e-03
+BENCHMARK:   10000, 3.43601e-05, 2.08041e-03, 2.57021e-05, 1.33105e-03
+BENCHMARK:   10000, 3.89090e-05, 6.76294e-03, 4.03987e-05, 1.41981e-03
+BENCHMARK:  100000, 2.76410e-04, 2.97534e-02, 2.74450e-04, 1.41824e-02
+BENCHMARK:  100000, 2.56846e-04, 3.09565e-02, 2.57643e-04, 1.45535e-02
+BENCHMARK:  100000, 2.81287e-04, 2.32602e-02, 2.95652e-04, 1.43613e-02
+BENCHMARK:  100000, 3.67781e-04, 4.83734e-02, 3.23697e-04, 1.39774e-02
+BENCHMARK:  100000, 2.86091e-04, 5.42071e-02, 2.77598e-04, 1.37554e-02
+BENCHMARK:  100000, 2.53039e-04, 2.29275e-02, 3.04990e-04, 1.47141e-02
+BENCHMARK:  100000, 3.15336e-04, 2.74997e-02, 3.30093e-04, 1.97562e-02
+BENCHMARK:  100000, 3.04194e-04, 3.28065e-02, 3.10936e-04, 1.41058e-02
+BENCHMARK:  100000, 2.62859e-04, 3.43810e-02, 2.91685e-04, 1.44090e-02
+BENCHMARK:  100000, 2.57283e-04, 2.32539e-02, 2.96048e-04, 1.37765e-02
+BENCHMARK: 1000000, 3.01540e-03, 2.91232e-01, 2.90174e-03, 1.50826e-01
+BENCHMARK: 1000000, 3.00593e-03, 2.59799e-01, 2.96029e-03, 1.47302e-01
+BENCHMARK: 1000000, 3.14120e-03, 2.77016e-01, 2.97783e-03, 1.36578e-01
+BENCHMARK: 1000000, 2.95764e-03, 3.60596e-01, 3.01899e-03, 1.88287e-01
+BENCHMARK: 1000000, 2.80589e-03, 2.47539e-01, 3.02668e-03, 1.57492e-01
+BENCHMARK: 1000000, 3.01445e-03, 3.07494e-01, 3.16144e-03, 1.62143e-01
+BENCHMARK: 1000000, 2.91940e-03, 2.52734e-01, 2.98826e-03, 1.65883e-01
+BENCHMARK: 1000000, 2.96823e-03, 2.78792e-01, 3.11196e-03, 1.55243e-01
+BENCHMARK: 1000000, 3.12432e-03, 3.20306e-01, 3.01611e-03, 1.84215e-01
+BENCHMARK: 1000000, 3.00701e-03, 2.93636e-01, 2.78037e-03, 1.51116e-01
+   script complete.

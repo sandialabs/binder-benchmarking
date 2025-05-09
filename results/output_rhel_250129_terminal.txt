@@ -1,0 +1,547 @@
+[root@d0891f6ad60a binder_LDRD]# ./scripts/run_all.sh > output_rhel.txt
+
+======== Input profiles ========
+Profile host:
+[settings]
+arch=x86_64
+build_type=Release
+compiler=clang
+compiler.cppstd=17
+compiler.version=18
+os=Linux
+
+Profile build:
+[settings]
+arch=x86_64
+build_type=Release
+compiler=clang
+compiler.cppstd=17
+compiler.version=18
+os=Linux
+
+
+======== Computing dependency graph ========
+eigen/3.4.0: Not found in local cache, looking in remotes...
+eigen/3.4.0: Checking remote: conan-group-master
+Connecting to remote 'conan-group-master' with user 'mrwalke'
+eigen/3.4.0: Downloaded recipe revision 2e192482a8acff96fe34766adca2b24c
+catch2/3.4.0: Not found in local cache, looking in remotes...
+catch2/3.4.0: Checking remote: conan-group-master
+catch2/3.4.0: Downloaded recipe revision eb6f89bbc70b6b3d8748d21ab8fb9468
+cmake/3.29.3: Not found in local cache, looking in remotes...
+cmake/3.29.3: Checking remote: conan-group-master
+cmake/3.29.3: Downloaded recipe revision 292a699b66d006bf4c6648608fa7c9e4
+Graph root
+    conanfile.py (binder/None): /app/binder_LDRD/conanfile.py
+Requirements
+    catch2/3.4.0#eb6f89bbc70b6b3d8748d21ab8fb9468 - Downloaded (conan-group-master)
+    eigen/3.4.0#2e192482a8acff96fe34766adca2b24c - Downloaded (conan-group-master)
+Build requirements
+    cmake/3.29.3#292a699b66d006bf4c6648608fa7c9e4 - Downloaded (conan-group-master)
+Resolved version ranges
+    cmake/[>=3.20]: cmake/3.29.3
+
+======== Computing necessary packages ========
+catch2/3.4.0: Main binary package 'a5071d5c6264e2f10618425fc288c9ebadc30f93' missing
+catch2/3.4.0: Checking 9 compatible configurations
+catch2/3.4.0: Compatible configurations not found in cache, checking servers
+catch2/3.4.0: '6a61a4557f5fc090001c7f76730d99c11d93137e': compiler.cppstd=14
+catch2/3.4.0: '0a85f9ab4d5aa292cea7be51d4930b97a5206398': compiler.cppstd=gnu14
+catch2/3.4.0: 'f61e1a829a82040c486670c6917eb703a3101208': compiler.cppstd=gnu17
+catch2/3.4.0: 'd3699ea70473cdeba713e67206cf5b676d032fb3': compiler.cppstd=20
+catch2/3.4.0: 'ba9419bcc9e7ee7c18c6d29cad8a900d7c3e22b7': compiler.cppstd=gnu20
+catch2/3.4.0: 'a6a3a0fba4d675ef16de1bc47595c48bc39c2431': compiler.cppstd=23
+catch2/3.4.0: '96a972e91fa677964c1433e0fabb982f1991deaf': compiler.cppstd=gnu23
+catch2/3.4.0: '6c75d5d2d103954ade886dc9e7e8152471350f1b': compiler.cppstd=26
+catch2/3.4.0: 'f8f690c7e7f092913785ab4d1147aef55de165f6': compiler.cppstd=gnu26
+Requirements
+    catch2/3.4.0#eb6f89bbc70b6b3d8748d21ab8fb9468:a5071d5c6264e2f10618425fc288c9ebadc30f93 - Build
+    eigen/3.4.0#2e192482a8acff96fe34766adca2b24c:da39a3ee5e6b4b0d3255bfef95601890afd80709#b2e7c2d86c5d1dbefc534889aa72e12c - Download (conan-group-master)
+Build requirements
+    cmake/3.29.3#292a699b66d006bf4c6648608fa7c9e4:63fead0844576fc02943e16909f08fcdddd6f44b#cd1f05e22b6797ef13dd59b74c709699 - Download (conan-group-master)
+
+======== Installing packages ========
+
+-------- Downloading 2 packages --------
+cmake/3.29.3: Retrieving package 63fead0844576fc02943e16909f08fcdddd6f44b from remote 'conan-group-master'
+cmake/3.29.3: Downloading 43.8MB conan_package.tgz
+cmake/3.29.3: Decompressing 43.8MB conan_package.tgz
+cmake/3.29.3: Package installed 63fead0844576fc02943e16909f08fcdddd6f44b
+cmake/3.29.3: Downloaded package revision cd1f05e22b6797ef13dd59b74c709699
+eigen/3.4.0: Retrieving package da39a3ee5e6b4b0d3255bfef95601890afd80709 from remote 'conan-group-master'
+eigen/3.4.0: Package installed da39a3ee5e6b4b0d3255bfef95601890afd80709
+eigen/3.4.0: Downloaded package revision b2e7c2d86c5d1dbefc534889aa72e12c
+catch2/3.4.0: Sources downloaded from 'conan-group-master'
+catch2/3.4.0: Calling source() in /root/.conan2/p/catch059e2a6ffd654/s/src
+catch2/3.4.0: Unzipping v3.4.0.tar.gz to .
+
+-------- Installing package catch2/3.4.0 (1 of 3) --------
+catch2/3.4.0: Building from source
+catch2/3.4.0: Package catch2/3.4.0:a5071d5c6264e2f10618425fc288c9ebadc30f93
+catch2/3.4.0: Copying sources to build folder
+catch2/3.4.0: Building your package in /root/.conan2/p/b/catch21503946f55df/b
+catch2/3.4.0: Calling generate()
+catch2/3.4.0: Generators folder: /root/.conan2/p/b/catch21503946f55df/b/build/Release/generators
+catch2/3.4.0: CMakeToolchain generated: conan_toolchain.cmake
+catch2/3.4.0: CMakeToolchain generated: /root/.conan2/p/b/catch21503946f55df/b/build/Release/generators/CMakePresets.json
+catch2/3.4.0: CMakeToolchain generated: /root/.conan2/p/b/catch21503946f55df/b/src/CMakeUserPresets.json
+catch2/3.4.0: Generating aggregated env files
+catch2/3.4.0: Generated aggregated env files: ['conanbuild.sh', 'conanrun.sh']
+catch2/3.4.0: Calling build()
+catch2/3.4.0: apply_conandata_patches(): No patches defined in conandata
+catch2/3.4.0: Running CMake.configure()
+catch2/3.4.0: RUN: cmake -G "Unix Makefiles" -DCMAKE_TOOLCHAIN_FILE="generators/conan_toolchain.cmake" -DCMAKE_INSTALL_PREFIX="/root/.conan2/p/b/catch21503946f55df/p" -DCATCH_INSTALL_DOCS="OFF" -DCATCH_INSTALL_EXTRAS="ON" -DCATCH_DEVELOPMENT_BUILD="OFF" -DCMAKE_POLICY_DEFAULT_CMP0091="NEW" -DCMAKE_BUILD_TYPE="Release" "/root/.conan2/p/b/catch21503946f55df/b/src"
+-- Using Conan toolchain: /root/.conan2/p/b/catch21503946f55df/b/build/Release/generators/conan_toolchain.cmake
+-- Conan toolchain: Setting CMAKE_POSITION_INDEPENDENT_CODE=ON (options.fPIC)
+-- Conan toolchain: Defining architecture flag: -m64
+-- Conan toolchain: C++ Standard 17 with extensions OFF
+-- Conan toolchain: Setting BUILD_SHARED_LIBS = OFF
+-- The CXX compiler identification is GNU 11.5.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Performing Test HAVE_FLAG__ffile_prefix_map__root__conan2_p_b_catch21503946f55df_b_src__
+-- Performing Test HAVE_FLAG__ffile_prefix_map__root__conan2_p_b_catch21503946f55df_b_src__ - Success
+-- Configuring done (0.4s)
+-- Generating done (0.0s)
+-- Build files have been written to: /root/.conan2/p/b/catch21503946f55df/b/build/Release
+
+catch2/3.4.0: Running CMake.build()
+catch2/3.4.0: RUN: cmake --build "/root/.conan2/p/b/catch21503946f55df/b/build/Release" -- -j20
+[  0%] Building CXX object src/CMakeFiles/Catch2.dir/catch2/benchmark/catch_chronometer.cpp.o
+[  2%] Building CXX object src/CMakeFiles/Catch2.dir/catch2/benchmark/detail/catch_stats.cpp.o
+[  2%] Building CXX object src/CMakeFiles/Catch2.dir/catch2/benchmark/detail/catch_benchmark_function.cpp.o
+[  3%] Building CXX object src/CMakeFiles/Catch2.dir/catch2/benchmark/detail/catch_run_for_at_least.cpp.o
+[  4%] Building CXX object src/CMakeFiles/Catch2.dir/catch2/generators/catch_generators.cpp.o
+[  6%] Building CXX object src/CMakeFiles/Catch2.dir/catch2/generators/catch_generator_exception.cpp.o
+[  6%] Building CXX object src/CMakeFiles/Catch2.dir/catch2/generators/catch_generators_random.cpp.o
+[  7%] Building CXX object src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_automake.cpp.o
+[  8%] Building CXX object src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_compact.cpp.o
+[  9%] Building CXX object src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_cumulative_base.cpp.o
+[ 10%] Building CXX object src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_event_listener.cpp.o
+[ 11%] Building CXX object src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_helpers.cpp.o
+[ 12%] Building CXX object src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_junit.cpp.o
+[ 12%] Building CXX object src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_sonarqube.cpp.o
+[ 13%] Building CXX object src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_tap.cpp.o
+[ 14%] Building CXX object src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_console.cpp.o
+[ 15%] Building CXX object src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_common_base.cpp.o
+[ 17%] Building CXX object src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_streaming_base.cpp.o
+[ 18%] Building CXX object src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_registrars.cpp.o
+[ 18%] Building CXX object src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_multi.cpp.o
+[ 19%] Building CXX object src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_teamcity.cpp.o
+[ 20%] Building CXX object src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_xml.cpp.o
+[ 21%] Building CXX object src/CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_capture.cpp.o
+[ 22%] Building CXX object src/CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_config.cpp.o
+[ 23%] Building CXX object src/CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_exception.cpp.o
+[ 24%] Building CXX object src/CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_registry_hub.cpp.o
+[ 25%] Building CXX object src/CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_generatortracker.cpp.o
+[ 26%] Building CXX object src/CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_reporter.cpp.o
+[ 27%] Building CXX object src/CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_reporter_factory.cpp.o
+[ 28%] Building CXX object src/CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_testcase.cpp.o
+[ 29%] Building CXX object src/CMakeFiles/Catch2.dir/catch2/catch_approx.cpp.o
+[ 30%] Building CXX object src/CMakeFiles/Catch2.dir/catch2/catch_assertion_result.cpp.o
+[ 31%] Building CXX object src/CMakeFiles/Catch2.dir/catch2/catch_config.cpp.o
+[ 32%] Building CXX object src/CMakeFiles/Catch2.dir/catch2/catch_get_random_seed.cpp.o
+[ 33%] Building CXX object src/CMakeFiles/Catch2.dir/catch2/catch_message.cpp.o
+[ 33%] Building CXX object src/CMakeFiles/Catch2.dir/catch2/catch_registry_hub.cpp.o
+[ 34%] Building CXX object src/CMakeFiles/Catch2.dir/catch2/catch_session.cpp.o
+[ 35%] Building CXX object src/CMakeFiles/Catch2.dir/catch2/catch_tag_alias_autoregistrar.cpp.o
+[ 36%] Building CXX object src/CMakeFiles/Catch2.dir/catch2/catch_test_case_info.cpp.o
+[ 37%] Building CXX object src/CMakeFiles/Catch2.dir/catch2/catch_test_spec.cpp.o
+[ 38%] Building CXX object src/CMakeFiles/Catch2.dir/catch2/catch_tostring.cpp.o
+[ 39%] Building CXX object src/CMakeFiles/Catch2.dir/catch2/catch_timer.cpp.o
+[ 40%] Building CXX object src/CMakeFiles/Catch2.dir/catch2/catch_totals.cpp.o
+[ 41%] Building CXX object src/CMakeFiles/Catch2.dir/catch2/catch_translate_exception.cpp.o
+[ 42%] Building CXX object src/CMakeFiles/Catch2.dir/catch2/catch_version.cpp.o
+[ 43%] Building CXX object src/CMakeFiles/Catch2.dir/catch2/internal/catch_case_insensitive_comparisons.cpp.o
+[ 44%] Building CXX object src/CMakeFiles/Catch2.dir/catch2/internal/catch_assertion_handler.cpp.o
+[ 45%] Building CXX object src/CMakeFiles/Catch2.dir/catch2/internal/catch_clara.cpp.o
+[ 46%] Building CXX object src/CMakeFiles/Catch2.dir/catch2/internal/catch_commandline.cpp.o
+[ 47%] Building CXX object src/CMakeFiles/Catch2.dir/catch2/internal/catch_console_colour.cpp.o
+[ 48%] Building CXX object src/CMakeFiles/Catch2.dir/catch2/internal/catch_context.cpp.o
+[ 49%] Building CXX object src/CMakeFiles/Catch2.dir/catch2/internal/catch_debug_console.cpp.o
+[ 50%] Building CXX object src/CMakeFiles/Catch2.dir/catch2/internal/catch_debugger.cpp.o
+[ 50%] Building CXX object src/CMakeFiles/Catch2.dir/catch2/internal/catch_decomposer.cpp.o
+[ 51%] Building CXX object src/CMakeFiles/Catch2.dir/catch2/internal/catch_enforce.cpp.o
+[ 52%] Building CXX object src/CMakeFiles/Catch2.dir/catch2/internal/catch_enum_values_registry.cpp.o
+[ 53%] Building CXX object src/CMakeFiles/Catch2.dir/catch2/internal/catch_errno_guard.cpp.o
+[ 54%] Building CXX object src/CMakeFiles/Catch2.dir/catch2/internal/catch_exception_translator_registry.cpp.o
+[ 55%] Building CXX object src/CMakeFiles/Catch2.dir/catch2/internal/catch_fatal_condition_handler.cpp.o
+[ 56%] Building CXX object src/CMakeFiles/Catch2.dir/catch2/internal/catch_floating_point_helpers.cpp.o
+[ 57%] Building CXX object src/CMakeFiles/Catch2.dir/catch2/internal/catch_getenv.cpp.o
+[ 58%] Building CXX object src/CMakeFiles/Catch2.dir/catch2/internal/catch_istream.cpp.o
+[ 59%] Building CXX object src/CMakeFiles/Catch2.dir/catch2/internal/catch_lazy_expr.cpp.o
+[ 60%] Building CXX object src/CMakeFiles/Catch2.dir/catch2/internal/catch_leak_detector.cpp.o
+[ 61%] Building CXX object src/CMakeFiles/Catch2.dir/catch2/internal/catch_list.cpp.o
+[ 62%] Building CXX object src/CMakeFiles/Catch2.dir/catch2/internal/catch_message_info.cpp.o
+[ 63%] Building CXX object src/CMakeFiles/Catch2.dir/catch2/internal/catch_output_redirect.cpp.o
+[ 64%] Building CXX object src/CMakeFiles/Catch2.dir/catch2/internal/catch_parse_numbers.cpp.o
+[ 65%] Building CXX object src/CMakeFiles/Catch2.dir/catch2/internal/catch_polyfills.cpp.o
+[ 66%] Building CXX object src/CMakeFiles/Catch2.dir/catch2/internal/catch_random_number_generator.cpp.o
+[ 66%] Building CXX object src/CMakeFiles/Catch2.dir/catch2/internal/catch_random_seed_generation.cpp.o
+[ 67%] Building CXX object src/CMakeFiles/Catch2.dir/catch2/internal/catch_reporter_registry.cpp.o
+[ 68%] Building CXX object src/CMakeFiles/Catch2.dir/catch2/internal/catch_reporter_spec_parser.cpp.o
+[ 69%] Building CXX object src/CMakeFiles/Catch2.dir/catch2/internal/catch_result_type.cpp.o
+[ 70%] Building CXX object src/CMakeFiles/Catch2.dir/catch2/internal/catch_reusable_string_stream.cpp.o
+[ 72%] Building CXX object src/CMakeFiles/Catch2.dir/catch2/internal/catch_run_context.cpp.o
+[ 73%] Building CXX object src/CMakeFiles/Catch2.dir/catch2/internal/catch_singletons.cpp.o
+[ 71%] Building CXX object src/CMakeFiles/Catch2.dir/catch2/internal/catch_section.cpp.o
+[ 74%] Building CXX object src/CMakeFiles/Catch2.dir/catch2/internal/catch_source_line_info.cpp.o
+[ 75%] Building CXX object src/CMakeFiles/Catch2.dir/catch2/internal/catch_startup_exception_registry.cpp.o
+[ 76%] Building CXX object src/CMakeFiles/Catch2.dir/catch2/internal/catch_stdstreams.cpp.o
+[ 77%] Building CXX object src/CMakeFiles/Catch2.dir/catch2/internal/catch_string_manip.cpp.o
+[ 78%] Building CXX object src/CMakeFiles/Catch2.dir/catch2/internal/catch_stringref.cpp.o
+[ 79%] Building CXX object src/CMakeFiles/Catch2.dir/catch2/internal/catch_tag_alias_registry.cpp.o
+[ 80%] Building CXX object src/CMakeFiles/Catch2.dir/catch2/internal/catch_test_case_info_hasher.cpp.o
+[ 81%] Building CXX object src/CMakeFiles/Catch2.dir/catch2/internal/catch_test_case_registry_impl.cpp.o
+[ 82%] Building CXX object src/CMakeFiles/Catch2.dir/catch2/internal/catch_test_case_tracker.cpp.o
+[ 83%] Building CXX object src/CMakeFiles/Catch2.dir/catch2/internal/catch_test_failure_exception.cpp.o
+[ 83%] Building CXX object src/CMakeFiles/Catch2.dir/catch2/internal/catch_test_registry.cpp.o
+[ 84%] Building CXX object src/CMakeFiles/Catch2.dir/catch2/internal/catch_test_spec_parser.cpp.o
+[ 85%] Building CXX object src/CMakeFiles/Catch2.dir/catch2/internal/catch_textflow.cpp.o
+[ 86%] Building CXX object src/CMakeFiles/Catch2.dir/catch2/internal/catch_uncaught_exceptions.cpp.o
+[ 87%] Building CXX object src/CMakeFiles/Catch2.dir/catch2/internal/catch_wildcard_pattern.cpp.o
+[ 88%] Building CXX object src/CMakeFiles/Catch2.dir/catch2/internal/catch_xmlwriter.cpp.o
+[ 89%] Building CXX object src/CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers.cpp.o
+[ 91%] Building CXX object src/CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_container_properties.cpp.o
+[ 91%] Building CXX object src/CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_exception.cpp.o
+[ 92%] Building CXX object src/CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_floating_point.cpp.o
+[ 93%] Building CXX object src/CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_predicate.cpp.o
+[ 94%] Building CXX object src/CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_quantifiers.cpp.o
+[ 95%] Building CXX object src/CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_string.cpp.o
+[ 96%] Building CXX object src/CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_templated.cpp.o
+[ 97%] Building CXX object src/CMakeFiles/Catch2.dir/catch2/matchers/internal/catch_matchers_impl.cpp.o
+[ 98%] Linking CXX static library libCatch2.a
+[ 98%] Built target Catch2
+[ 99%] Building CXX object src/CMakeFiles/Catch2WithMain.dir/catch2/internal/catch_main.cpp.o
+[100%] Linking CXX static library libCatch2Main.a
+[100%] Built target Catch2WithMain
+
+catch2/3.4.0: Package 'a5071d5c6264e2f10618425fc288c9ebadc30f93' built
+catch2/3.4.0: Build folder /root/.conan2/p/b/catch21503946f55df/b/build/Release
+catch2/3.4.0: Generating the package
+catch2/3.4.0: Packaging in folder /root/.conan2/p/b/catch21503946f55df/p
+catch2/3.4.0: Calling package()
+catch2/3.4.0: Running CMake.install()
+catch2/3.4.0: RUN: cmake --install "/root/.conan2/p/b/catch21503946f55df/b/build/Release" --prefix "/root/.conan2/p/b/catch21503946f55df/p"
+-- Install configuration: "Release"
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/lib/cmake/Catch2/Catch2Config.cmake
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/lib/cmake/Catch2/Catch2ConfigVersion.cmake
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/lib/cmake/Catch2/ParseAndAddCatchTests.cmake
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/lib/cmake/Catch2/Catch.cmake
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/lib/cmake/Catch2/CatchAddTests.cmake
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/lib/cmake/Catch2/CatchShardTests.cmake
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/lib/cmake/Catch2/CatchShardTestsImpl.cmake
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/share/Catch2/gdbinit
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/share/Catch2/lldbinit
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/share/pkgconfig/catch2.pc
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/share/pkgconfig/catch2-with-main.pc
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/lib/libCatch2.a
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/lib/libCatch2Main.a
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/lib/cmake/Catch2/Catch2Targets.cmake
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/lib/cmake/Catch2/Catch2Targets-release.cmake
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/generators
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/generators/catch_generators.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/generators/catch_generators_random.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/generators/catch_generators_all.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/generators/catch_generators_range.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/generators/catch_generators_adapters.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/generators/catch_generator_exception.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/catch_get_random_seed.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/catch_template_test_macros.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/catch_assertion_result.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/catch_test_macros.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/catch_timer.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/reporters
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/reporters/catch_reporter_event_listener.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/reporters/catch_reporter_registrars.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/reporters/catch_reporters_all.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/reporters/catch_reporter_compact.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/reporters/catch_reporter_multi.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/reporters/catch_reporter_cumulative_base.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/reporters/catch_reporter_helpers.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/reporters/catch_reporter_common_base.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/reporters/catch_reporter_xml.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/reporters/catch_reporter_teamcity.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/reporters/catch_reporter_junit.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/reporters/catch_reporter_streaming_base.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/reporters/catch_reporter_tap.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/reporters/catch_reporter_console.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/reporters/catch_reporter_sonarqube.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/reporters/catch_reporter_automake.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/catch_config.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/interfaces
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/interfaces/catch_interfaces_enum_values_registry.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/interfaces/catch_interfaces_generatortracker.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/interfaces/catch_interfaces_capture.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/interfaces/catch_interfaces_exception.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/interfaces/catch_interfaces_reporter.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/interfaces/catch_interfaces_tag_alias_registry.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/interfaces/catch_interfaces_testcase.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/interfaces/catch_interfaces_config.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/interfaces/catch_interfaces_registry_hub.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/interfaces/catch_interfaces_all.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/interfaces/catch_interfaces_test_invoker.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/interfaces/catch_interfaces_reporter_factory.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/benchmark
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/benchmark/catch_outlier_classification.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/benchmark/catch_constructor.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/benchmark/catch_environment.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/benchmark/catch_sample_analysis.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/benchmark/detail
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/benchmark/detail/catch_complete_invoke.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/benchmark/detail/catch_benchmark_stats_fwd.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/benchmark/detail/catch_analyse.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/benchmark/detail/catch_benchmark_stats.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/benchmark/detail/catch_estimate_clock.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/benchmark/detail/catch_repeat.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/benchmark/detail/catch_run_for_at_least.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/benchmark/detail/catch_benchmark_function.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/benchmark/detail/catch_timing.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/benchmark/detail/catch_measure.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/benchmark/detail/catch_stats.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/benchmark/catch_benchmark.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/benchmark/catch_optimizer.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/benchmark/catch_execution_plan.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/benchmark/catch_chronometer.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/benchmark/catch_clock.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/benchmark/catch_estimate.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/benchmark/catch_benchmark_all.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/matchers
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/matchers/catch_matchers_contains.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/matchers/catch_matchers_predicate.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/matchers/catch_matchers_exception.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/matchers/catch_matchers_templated.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/matchers/catch_matchers.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/matchers/catch_matchers_all.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/matchers/catch_matchers_vector.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/matchers/catch_matchers_container_properties.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/matchers/internal
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/matchers/internal/catch_matchers_impl.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/matchers/catch_matchers_range_equals.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/matchers/catch_matchers_string.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/matchers/catch_matchers_floating_point.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/matchers/catch_matchers_quantifiers.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/catch_tag_alias.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/catch_session.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/catch_translate_exception.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/catch_assertion_info.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/catch_all.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/catch_version_macros.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/catch_message.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/catch_test_spec.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/catch_version.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/catch_tag_alias_autoregistrar.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/catch_tostring.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/internal
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/internal/catch_decomposer.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/internal/catch_sharding.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/internal/catch_test_case_tracker.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/internal/catch_case_insensitive_comparisons.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/internal/catch_stdstreams.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/internal/catch_floating_point_helpers.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/internal/catch_console_width.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/internal/catch_optional.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/internal/catch_config_uncaught_exceptions.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/internal/catch_test_spec_parser.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/internal/catch_stream_end_stop.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/internal/catch_test_run_info.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/internal/catch_result_type.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/internal/catch_enforce.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/internal/catch_move_and_forward.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/internal/catch_template_test_registry.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/internal/catch_is_permutation.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/internal/catch_polyfills.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/internal/catch_parse_numbers.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/internal/catch_message_info.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/internal/catch_run_context.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/internal/catch_preprocessor.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/internal/catch_case_sensitive.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/internal/catch_test_case_registry_impl.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/internal/catch_config_android_logwrite.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/internal/catch_section.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/internal/catch_unique_name.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/internal/catch_assertion_handler.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/internal/catch_void_type.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/internal/catch_meta.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/internal/catch_windows_h_proxy.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/internal/catch_stringref.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/internal/catch_random_number_generator.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/internal/catch_list.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/internal/catch_test_failure_exception.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/internal/catch_wildcard_pattern.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/internal/catch_output_redirect.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/internal/catch_source_line_info.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/internal/catch_preprocessor_internal_stringify.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/internal/catch_platform.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/internal/catch_context.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/internal/catch_compare_traits.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/internal/catch_to_string.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/internal/catch_string_manip.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/internal/catch_logical_traits.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/internal/catch_enum_values_registry.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/internal/catch_uncaught_exceptions.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/internal/catch_reporter_spec_parser.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/internal/catch_xmlwriter.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/internal/catch_debugger.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/internal/catch_clara.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/internal/catch_test_registry.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/internal/catch_test_macro_impl.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/internal/catch_lazy_expr.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/internal/catch_fatal_condition_handler.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/internal/catch_startup_exception_registry.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/internal/catch_preprocessor_remove_parens.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/internal/catch_reusable_string_stream.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/internal/catch_commandline.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/internal/catch_istream.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/internal/catch_test_case_info_hasher.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/internal/catch_container_nonmembers.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/internal/catch_singletons.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/internal/catch_config_counter.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/internal/catch_noncopyable.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/internal/catch_exception_translator_registry.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/internal/catch_textflow.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/internal/catch_leak_detector.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/internal/catch_random_seed_generation.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/internal/catch_debug_console.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/internal/catch_console_colour.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/internal/catch_errno_guard.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/internal/catch_tag_alias_registry.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/internal/catch_config_static_analysis_support.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/internal/catch_reporter_registry.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/internal/catch_compiler_capabilities.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/internal/catch_getenv.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/internal/catch_config_wchar.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/internal/catch_unique_ptr.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/catch_approx.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/catch_totals.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/catch_test_case_info.hpp
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/catch_section_info.hpp
+-- Up-to-date: /root/.conan2/p/b/catch21503946f55df/p/include/catch2
+-- Installing: /root/.conan2/p/b/catch21503946f55df/p/include/catch2/catch_user_config.hpp
+
+catch2/3.4.0: package(): Packaged 2 '.a' files: libCatch2Main.a, libCatch2.a
+catch2/3.4.0: package(): Packaged 4 '.cmake' files: conan-official-catch2-targets.cmake, CatchAddTests.cmake, ParseAndAddCatchTests.cmake, Catch.cmake
+catch2/3.4.0: package(): Packaged 1 '.txt' file: LICENSE.txt
+catch2/3.4.0: package(): Packaged 170 '.hpp' files
+catch2/3.4.0: Created package revision 2cbca24d121ece92972f7ab185a1ade7
+catch2/3.4.0: Package 'a5071d5c6264e2f10618425fc288c9ebadc30f93' created
+catch2/3.4.0: Full package reference: catch2/3.4.0#eb6f89bbc70b6b3d8748d21ab8fb9468:a5071d5c6264e2f10618425fc288c9ebadc30f93#2cbca24d121ece92972f7ab185a1ade7
+catch2/3.4.0: Package folder /root/.conan2/p/b/catch21503946f55df/p
+cmake/3.29.3: Appending PATH environment variable: /root/.conan2/p/cmakee640aa79d28bd/p/bin
+WARN: deprecated: Usage of deprecated Conan 1.X features that will be removed in Conan 2.X:
+WARN: deprecated:     'cpp_info.filenames' used in: catch2/3.4.0
+WARN: deprecated:     'cpp_info.names' used in: catch2/3.4.0, eigen/3.4.0
+WARN: deprecated:     'cpp_info.build_modules' used in: catch2/3.4.0
+WARN: deprecated:     'env_info' used in: cmake/3.29.3
+
+======== Finalizing install (deploy, generators) ========
+conanfile.py (binder/None): Writing generators to /app/binder_LDRD/build/Release/generators
+conanfile.py (binder/None): Generator 'CMakeDeps' calling 'generate()'
+conanfile.py (binder/None): CMakeDeps necessary find_package() and targets for your CMakeLists.txt
+    find_package(Eigen3)
+    find_package(Catch2)
+    target_link_libraries(... Eigen3::Eigen Catch2::Catch2WithMain)
+conanfile.py (binder/None): Calling generate()
+conanfile.py (binder/None): Generators folder: /app/binder_LDRD/build/Release/generators
+conanfile.py (binder/None): CMakeToolchain generated: conan_toolchain.cmake
+conanfile.py (binder/None): CMakeToolchain: Preset 'conan-release' added to CMakePresets.json.
+    (cmake>=3.23) cmake --preset conan-release
+    (cmake<3.23) cmake <path> -G "Unix Makefiles" -DCMAKE_TOOLCHAIN_FILE=generators/conan_toolchain.cmake  -DCMAKE_POLICY_DEFAULT_CMP0091=NEW -DCMAKE_BUILD_TYPE=Release
+conanfile.py (binder/None): CMakeToolchain generated: /app/binder_LDRD/build/Release/generators/CMakePresets.json
+conanfile.py (binder/None): CMakeToolchain generated: /app/binder_LDRD/CMakeUserPresets.json
+conanfile.py (binder/None): Generating aggregated env files
+conanfile.py (binder/None): Generated aggregated env files: ['conanbuild.sh', 'conanrun.sh']
+Install finished successfully
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+================================================================================
+BinderBenchmark v0.0.0, macro definitions:
+================================================================================
+================================================================================
+Excluding python module.
+Excluding matlab dll.
+WARN: Downgrading cache from Conan 2.12.1 to 2.12.0
+
+======== Input profiles ========
+Profile host:
+[settings]
+arch=x86_64
+build_type=Release
+compiler=gcc
+compiler.cppstd=17
+compiler.libcxx=libstdc++11
+compiler.version=11
+os=Linux
+
+Profile build:
+[settings]
+arch=x86_64
+build_type=Release
+compiler=gcc
+compiler.cppstd=17
+compiler.libcxx=libstdc++11
+compiler.version=11
+os=Linux
+
+
+======== Computing dependency graph ========
+Graph root
+    conanfile.py (binder/None): /app/binder_LDRD/conanfile.py
+Requirements
+    catch2/3.4.0#eb6f89bbc70b6b3d8748d21ab8fb9468 - Cache
+    eigen/3.4.0#2e192482a8acff96fe34766adca2b24c - Cache
+Build requirements
+    cmake/3.29.3#292a699b66d006bf4c6648608fa7c9e4 - Cache
+Resolved version ranges
+    cmake/[>=3.20]: cmake/3.29.3
+
+======== Computing necessary packages ========
+Requirements
+    catch2/3.4.0#eb6f89bbc70b6b3d8748d21ab8fb9468:96438105cb542059596be5ff639e510c5c525967#fa2ffeb61d91203cec5c25f4d63ff49b - Cache
+    eigen/3.4.0#2e192482a8acff96fe34766adca2b24c:da39a3ee5e6b4b0d3255bfef95601890afd80709#b2e7c2d86c5d1dbefc534889aa72e12c - Cache
+Build requirements
+    cmake/3.29.3#292a699b66d006bf4c6648608fa7c9e4:63fead0844576fc02943e16909f08fcdddd6f44b#cd1f05e22b6797ef13dd59b74c709699 - Cache
+
+======== Installing packages ========
+catch2/3.4.0: Already installed! (1 of 3)
+cmake/3.29.3: Already installed! (2 of 3)
+cmake/3.29.3: Appending PATH environment variable: /root/.conan2/p/cmakee640aa79d28bd/p/bin
+eigen/3.4.0: Already installed! (3 of 3)
+WARN: deprecated: Usage of deprecated Conan 1.X features that will be removed in Conan 2.X:
+WARN: deprecated:     'cpp_info.filenames' used in: catch2/3.4.0
+WARN: deprecated:     'cpp_info.names' used in: catch2/3.4.0, eigen/3.4.0
+WARN: deprecated:     'cpp_info.build_modules' used in: catch2/3.4.0
+WARN: deprecated:     'env_info' used in: cmake/3.29.3
+
+======== Finalizing install (deploy, generators) ========
+conanfile.py (binder/None): Writing generators to /app/binder_LDRD/build/Release/generators
+conanfile.py (binder/None): Generator 'CMakeDeps' calling 'generate()'
+conanfile.py (binder/None): CMakeDeps necessary find_package() and targets for your CMakeLists.txt
+    find_package(Eigen3)
+    find_package(Catch2)
+    target_link_libraries(... Eigen3::Eigen Catch2::Catch2WithMain)
+conanfile.py (binder/None): Calling generate()
+conanfile.py (binder/None): Generators folder: /app/binder_LDRD/build/Release/generators
+conanfile.py (binder/None): CMakeToolchain generated: conan_toolchain.cmake
+conanfile.py (binder/None): CMakeToolchain: Preset 'conan-release' added to CMakePresets.json.
+    (cmake>=3.23) cmake --preset conan-release
+    (cmake<3.23) cmake <path> -G "Unix Makefiles" -DCMAKE_TOOLCHAIN_FILE=generators/conan_toolchain.cmake  -DCMAKE_POLICY_DEFAULT_CMP0091=NEW -DCMAKE_BUILD_TYPE=Release
+conanfile.py (binder/None): CMakeToolchain generated: /app/binder_LDRD/build/Release/generators/CMakePresets.json
+conanfile.py (binder/None): CMakeToolchain generated: /app/binder_LDRD/CMakeUserPresets.json
+conanfile.py (binder/None): Generating aggregated env files
+conanfile.py (binder/None): Generated aggregated env files: ['conanbuild.sh', 'conanrun.sh']
+Install finished successfully
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+================================================================================
+BinderBenchmark v0.0.0, macro definitions:
+================================================================================
+================================================================================
+Excluding python module.
+Excluding matlab dll.
+=== Did NOT detect MSVC ===
+=== Did NOT detect MSVC ===
+lto-wrapper: warning: using serial compilation of 2 LTRANS jobs
+[root@d0891f6ad60a binder_LDRD]#

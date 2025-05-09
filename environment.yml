@@ -1,0 +1,26 @@
+name: binder_benchmark
+# conda remove -n paper_study --all
+channels:
+  - defaults
+dependencies:
+  - python>=3.12
+  - pip>=24.0
+  - pip:
+      # General data analytics
+      - numpy
+      - scipy
+      - pandas
+      - matplotlib
+      # Requirements for jupyter notebook in VSCode
+      - ipykernel
+      - ipympl
+      - pandoc # ipynb to pdf
+      - nbconvert
+      # General utilities
+      - pre-commit
+      # C/C++ package manager
+      - conan
+      # Project-specific
+      - nanobind
+      - pybind11[global]
+      - scikit-build
